@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;300;400;500;600&family=Roboto:wght@100;300;400&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(30, 30, 30);
+}
+
+h1 {
+  display: inline-block;
+}
+h1 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 100;
+}
+
+.container {
+  border-radius: 25px;
+  margin-top: 5px;
+  background: linear-gradient(
+    112.1deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
+  );
+  color: white;
+  padding: 0;
+  max-width: 600px;
+}
+header {
+  padding: 10px 0 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: rgba(0, 0, 0, 0.4) 1px solid;
+  text-align: center;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.weather-icon {
+  border: black solid 1px;
+  background: rgba(109, 154, 252, 0.3);
+  border-radius: 100%;
+}
+footer {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-top: rgba(0, 0, 0, 0.4) 1px solid;
+  padding: 5px 10px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.app-container {
+  margin: 10px auto;
+  padding: 0 40px;
+}
+.top-bar {
+  justify-content: space-between;
+  align-content: center;
+}
+.search-bar {
+  display: inline;
+}
+.change-button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.forecast {
+  padding-left: 40px;
+}
+
+.main-row {
+  font-size: 20px;
+}
+.today-date {
+  text-align: center;
+}
+.today__max-min-temp {
+  font-size: 16px;
+}
+.today-mid-col {
+  text-align: center;
+}
+.current__value {
+  float: right;
+}
+.current-location {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 2rem;
+  display: inline;
+}
+/* ------DEV------ */
+.fa-sun {
+  color: orange;
+}
+.fa-umbrella {
+  color: blueviolet;
+  font-size: 40px;
+}
+.sun-20 {
+  font-size: 20px;
+}
+
+.today-sun {
+  font-size: 40px;
+}
+.forecast__day-row {
+  padding: 10px 2px;
+  border: black solid 1px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.2) 95%
+  );
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+.card {
+  border: black solid 1px;
+  background: rgba(3, 7, 52, 0.3);
+}
