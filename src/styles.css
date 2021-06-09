@@ -21,9 +21,12 @@ h1 {
     rgb(32, 38, 57) 11.4%,
     rgb(63, 76, 119) 70.2%
   );
+  /*TODO Daytheme*/
+  /*background: linear-gradient(48deg, rgb(243, 187, 143), rgb(252, 242, 205) 56%);*/
+
   color: white;
   padding: 0;
-  max-width: 600px;
+  max-width: 900px;
 }
 header {
   padding: 10px 0 5px;
@@ -78,22 +81,20 @@ footer {
 .today-mid-col {
   text-align: center;
 }
-.current__value {
-  float: right;
+.icon-sheet i {
+  font-size: 50px;
 }
+/*.current__value {*/
+/*  float: right;*/
+/*}*/
 .current-location {
   font-family: "Montserrat Alternates", sans-serif;
   font-size: 2rem;
   display: inline;
 }
 /* ------DEV------ */
-.fa-sun {
-  color: orange;
-}
-.fa-umbrella {
-  color: blueviolet;
-  font-size: 40px;
-}
+
+
 .sun-20 {
   font-size: 20px;
 }
@@ -116,4 +117,12 @@ footer {
 .card {
   border: black solid 1px;
   background: rgba(3, 7, 52, 0.3);
+}
+
+.icon-sheet .fas,.icon-sheet .fab,.icon-sheet .far {
+  color: white;
+
+  background: -webkit-linear-gradient(#9c47fc, #356ad2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
