@@ -12,7 +12,29 @@ h1 {
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: 100;
 }
+.switch-image {
+  width: 35px;
+  margin: 7px;
+  line-height: 1;
+  font-size: 14px;
+}
 
+.degree_unit {
+  font-weight: bold;
+}
+
+.round-button {
+  border-color: #a04dff;
+  background: -webkit-linear-gradient(#9c47fc, #356ad2);
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: white;
+  box-sizing: content-box;
+  padding: 0;
+}
+.fa-map-marker-alt {
+  width: 35px;
+  margin: 7px;
+}
 .container {
   border-radius: 25px;
   margin-top: 5px;
@@ -70,9 +92,7 @@ footer {
 }
 
 
-.degree_unit {
-  font-size: 20px;
-}
+
 
 
 .main-row {
