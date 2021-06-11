@@ -38,7 +38,7 @@
             <button class="round-button rounded-circle" id="current-location-button">
                 <i class="fas fa-map-marker-alt"></i>
             </button>
-            <button class="round-button rounded-circle" id="degree-unit-button" value="fahrenheit">
+            <button class="round-button rounded-circle" id="degree-unit-button" value="metric">
                     <span class="button-degree-sign">°F</span><br/><i class="fas fa-exchange-alt"></i>
             </button>
             <button class="round-button rounded-circle" id="view-mode-button">
@@ -54,7 +54,7 @@
                             <i class="fas fa-sun"></i>
                         </div>
                         <div class="today__current-temp d-inline-block">
-                            <span class="current__value" id="current-temp__value">20</span>
+                            <span class="current__value temperature" id="current-temp__value" data-temp-value="20">20</span>
                             <span class="degree-sign">℃</span>
                         </div>
                     </div>
@@ -62,12 +62,12 @@
                         <div class="today__max-min-temp">
                             <span class="today__max-temp">
                                  <i class="fas fa-temperature-high"></i>
-                                <span class="today__max-temp-value" id="today__max-temp-value">21</span>
+                                <span class="today__max-temp-value temperature" id="today__max-temp-value" data-temp-value="21">21</span>
                                 <span class="degree-sign">℃</span>
                             </span>
                             <span class="today__min-temp">
                                 <i class="fas fa-temperature-low"></i>
-                                <span class="today__min-temp-value" id="today__min-temp-value">18</span>
+                                <span class="today__min-temp-value temperature" id="today__min-temp-value" data-temp-value="18">18</span>
                                 <span class="degree-sign">℃</span>
                             </span>
                     </div>
