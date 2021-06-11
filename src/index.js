@@ -111,7 +111,6 @@ function currentLocationWeather(position) {
 }
 
 function currentLocation() {
-  debugger;
   console.log("currentLocation");
   navigator.geolocation.getCurrentPosition(currentLocationWeather);
 }
