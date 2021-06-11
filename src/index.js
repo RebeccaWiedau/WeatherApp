@@ -83,7 +83,7 @@ function setWeather(response) {
   let currentHumidity = document.querySelector("#current-humidity__value");
   let currentWindSpeed = document.querySelector("#current-wind-speed__value");
 
-  let todayMaxTemp = document.querySelector(".today__max-temp");
+  let todayMaxTemp = document.querySelector("#today__max-temp-value");
   let todayMinTemp = document.querySelector("#today__min-temp-value");
   weatherCity.innerHTML = appData.location.city;
   weatherCountry.innerHTML = appData.location.countryCode;
