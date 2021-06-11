@@ -28,9 +28,9 @@
     </header>
     <div class="app-container">
         <div class="top-bar d-flex">
-            <div class="current-location">
-                <span class="current-city">City</span>,
-                <span class="current-country">Country</span>
+            <div class="weather-location">
+                <span class="weather-city" id="weather-city">City</span>,
+                <span class="weather-country" id="weather-country">Country</span>
             </div>
             <form class="search-bar" id="search-bar">
                 <div class="input-group mb-3">
@@ -42,35 +42,41 @@
                     </div>
                 </div>
             </form>
-            <button class="current-location__button round-button rounded-circle">
+            <button class="round-button rounded-circle" id="current-location-button">
                 <i class="fas fa-map-marker-alt"></i>
             </button>
-            <button class="round-button rounded-circle">
-                <div class="switch-image"><span class="degree_unit">°F</span><br/><i class="fas fa-exchange-alt"></i>
-                </div>
+            <button class="round-button rounded-circle" id="unit-switch-button">
+                    <span class="degree-sign">°F</span><br/><i class="fas fa-exchange-alt"></i>
             </button>
-            <button class="round-button rounded-circle">
+            <button class="round-button rounded-circle" id="view-mode-button">
                 <i class="fas fa-eye"></i>
             </button>
-
         </div>
         <hr/>
         <div class="main row">
             <div class="left-main-col col-4">
                 <div class="today">
                     <div class="">
-                        <div class="today__weather-icon">
+                        <div class="today__weather-icon" id="today__weather-icon">
                             <i class="fas fa-sun"></i>
                         </div>
                         <div class="today__current-temp d-inline-block">
-                            <span class="current__value" id="current-temp__value">20 </span>
+                            <span class="current__value" id="current-temp__value">20</span>
                             <span class="degree-sign">℃</span>
                         </div>
                     </div>
                     <div>
                         <div class="today__max-min-temp">
-                        <i class="fas fa-temperature-high"></i> <span class="today__max-temp">21</span> ℃ <span class="today__min-temp"><i class="fas fa-temperature-low"></i>
-                        18</span> ℃
+                            <span class="today__max-temp">
+                                 <i class="fas fa-temperature-high"></i>
+                                <span class="today__max-temp-value" id="today__max-temp-value">21</span>
+                                <span class="degree-sign">℃</span>
+                            </span>
+                            <span class="today__min-temp">
+                                <i class="fas fa-temperature-low"></i>
+                                <span class="today__min-temp-value" id="today__min-temp-value">18</span>
+                                <span class="degree-sign">℃</span>
+                            </span>
                     </div>
                         <div class="current-humidity d-inline-block">
                             <i class="fas fa-tint"></i>
@@ -92,13 +98,12 @@
         </div>
     </div>
     <footer>
-        <div><a href="https://github.com/RebeccaWiedau/WeatherApp/" target="blank_">Open Source App</a> by Rebecca
+        <div><a href="https://github.com/RebeccaWiedau/WeatherApp/" target="blank_"><i class="fab fa-github"></i></a> App by Rebecca
             Wiedau
         </div>
     </footer>
 </div>
-<!-- DEV SHEET -->
-<a href="sheet.html" target="blank_">Sheet</a>
+
 <script src="src/index.js"></script>
 </body>
 </html>
