@@ -5,13 +5,22 @@ body {
   background-color: rgb(30, 30, 30);
 }
 
+header {
+  padding: 10px 60px 5px 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: rgba(0, 0, 0, 0.4) 1px solid;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  justify-content: space-between;
+}
+
 h1 {
   display: inline-block;
-}
-h1 {
+
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: 100;
 }
+
 .switch-image {
   width: 35px;
   margin: 7px;
@@ -22,7 +31,36 @@ h1 {
 .degree_unit {
   font-weight: bold;
 }
+.today__weather-icon {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  text-align: center;
+  font-size: 70px;
+}
+.today-date {
 
+
+}
+
+.today__current-time {
+  font-size: 30px;
+}
+
+.today__current-temp {
+  display: inline-block;
+  text-align: center;
+  margin-left: 25px;
+  font-size: 60px;
+}
+
+.today__current-temp span {
+  vertical-align: text-bottom;
+}
+.today__weather-icon i {
+  vertical-align: text-top;
+  color: gold;
+}
 .round-button {
   border-color: #a04dff;
   background: -webkit-linear-gradient(#9c47fc, #356ad2);
@@ -50,14 +88,7 @@ h1 {
   padding: 0;
   max-width: 900px;
 }
-header {
-  padding: 10px 0 5px;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-bottom: rgba(0, 0, 0, 0.4) 1px solid;
-  text-align: center;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-}
+
 .weather-icon {
   border: black solid 1px;
   background: rgba(109, 154, 252, 0.3);
@@ -78,6 +109,7 @@ footer {
   justify-content: space-between;
   align-content: center;
 }
+
 .search-bar {
   display: inline;
 }
@@ -87,63 +119,19 @@ footer {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.forecast {
-  padding-left: 40px;
-}
 
 
 
-
-
-.main-row {
-  font-size: 20px;
-}
-.today-date {
-  text-align: center;
-}
-.today__max-min-temp {
-  font-size: 16px;
-}
-.today-mid-col {
-  text-align: center;
-}
-.icon-sheet i {
-  font-size: 50px;
-}
-/*.current__value {*/
-/*  float: right;*/
-/*}*/
 .current-location {
   font-family: "Montserrat Alternates", sans-serif;
   font-size: 2rem;
   display: inline;
 }
 /* ------DEV------ */
-
-
-.sun-20 {
-  font-size: 20px;
+.icon-sheet i {
+  font-size: 50px;
 }
 
-.today-sun {
-  font-size: 40px;
-}
-.forecast__day-row {
-  padding: 10px 2px;
-  border: black solid 1px;
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 0.1) 0%,
-    rgba(0, 0, 0, 0.2) 95%
-  );
-  border-radius: 15px;
-  margin-top: 10px;
-}
-
-.card {
-  border: black solid 1px;
-  background: rgba(3, 7, 52, 0.3);
-}
 
 .icon-sheet .fas,.icon-sheet .fab,.icon-sheet .far {
   color: white;

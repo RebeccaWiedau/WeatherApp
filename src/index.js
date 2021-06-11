@@ -6,13 +6,13 @@ function currentDate() {
   let currentTimeEl = document.querySelector(".today__current-time");
   let now = new Date();
   let weekdays = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
+    "Sun,",
+    "Mon,",
+    "Tue,",
+    "Wed,",
+    "Thu,",
+    "Fri,",
+    "Sat,"
   ];
   let weekday = weekdays[now.getDay()];
   let minutes = now.getMinutes();

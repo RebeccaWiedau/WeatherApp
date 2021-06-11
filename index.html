@@ -18,8 +18,13 @@
 </head>
 <body>
 <div class="container">
-    <header>
+    <header class="d-flex">
         <h1>WeatherApp</h1>
+        <div class="today-date d-inline-block" id="today-date">
+            <div class="today__current-time">14:30</div>
+            <div class="today__weekday d-inline-block">DAY</div>
+            <div class="today__day d-inline-block">21.10.21</div>
+        </div>
     </header>
     <div class="app-container">
         <div class="top-bar d-flex">
@@ -29,17 +34,9 @@
             </div>
             <form class="search-bar" id="search-bar">
                 <div class="input-group mb-3">
-                    <input
-                            id="city-input"
-                            type="text"
-                            class="form-control"
-                            placeholder="Enter location..."
-                    />
+                    <input id="city-input" type="text" class="form-control" placeholder="Enter location..."/>
                     <div class="input-group-append">
-                        <button
-                                class="btn btn-outline-light change-button "
-                                type="submit"
-                        >
+                        <button class="btn btn-outline-light change-button" type="submit">
                             <i class="fas fa-search-location"></i>
                         </button>
                     </div>
@@ -48,59 +45,56 @@
             <button class="current-location__button round-button rounded-circle">
                 <i class="fas fa-map-marker-alt"></i>
             </button>
-            <button class="round-button rounded-circle"><div class="switch-image"><span class="degree_unit">°F</span><br/><i class="fas fa-exchange-alt"></i></div></button>
+            <button class="round-button rounded-circle">
+                <div class="switch-image"><span class="degree_unit">°F</span><br/><i class="fas fa-exchange-alt"></i>
+                </div>
+            </button>
+            <button class="round-button rounded-circle">
+                <i class="fas fa-eye"></i>
+            </button>
 
         </div>
         <hr/>
         <div class="main row">
-            <div class="today col-6">
-                <div class="">
-                    <i class="fas fa-sun">
-                    </i>
-
-
-
-
-
-
-
-                    <div class="current_temp">
-                        Temperature:
-                        <span class="current__value" id="current-temp__value">? ℃</span>
+            <div class="left-main-col col-4">
+                <div class="today">
+                    <div class="">
+                        <div class="today__weather-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <div class="today__current-temp d-inline-block">
+                            <span class="current__value" id="current-temp__value">20 </span>
+                            <span class="degree-sign">℃</span>
+                        </div>
                     </div>
-                    <div class="current-humidity">
-                        Humidity:
-                        <span class="current__value" id="current-humidity__value"
-                        >80%</span
-                        >
-                    </div>
-                    <div class="current-wind-speed">
-                        Windspeed:
-                        <span class="current__value" id="current-wind-speed__value"
-                        >? m/s</span
-                        >
-                    </div>
-                </div>
-                <div class="today-mid-col">
-
-                    <div class="today__max-min-temp">
-                        <span class="today__max-temp">?</span> ℃ |
-                        <span class="today__min-temp">?</span> ℃
-                    </div>
-                </div>
-                <div class="today-date" id="today-date">
-                    <div>(Your Time)</div>
-                    <div><span class="today__day">21.10.21</span></div>
                     <div>
-                        <span class="today__weekday">DAY</span>
-                        <span class="today__current-time">14:30</span>
+                        <div class="today__max-min-temp">
+                        <i class="fas fa-temperature-high"></i> <span class="today__max-temp">21</span> ℃ <span class="today__min-temp"><i class="fas fa-temperature-low"></i>
+                        18</span> ℃
+                    </div>
+                        <div class="current-humidity d-inline-block">
+                            <i class="fas fa-tint"></i>
+                            <span class="current__value" id="current-humidity__value">80</span>
+                            <span class="percent-sign">%</span>
+                        </div>
+                        <div class="current-wind-speed d-inline-block">
+                            <i class="fas fa-wind"></i>
+                            <span class="current__value" id="current-wind-speed__value">9 </span>
+                            <span class="speed-sign">m/s</span>
+                        </div>
+
                     </div>
                 </div>
-            </div>
+                </div>
+                <div class="right-main-col col-8">
+
+                </div>
         </div>
     </div>
     <footer>
-        <div><a href="https://github.com/RebeccaWiedau/WeatherApp/" target="blank_">Open Source App</a> by Rebecca Wiedau</div>
+        <div><a href="https://github.com/RebeccaWiedau/WeatherApp/" target="blank_">Open Source App</a> by Rebecca
+            Wiedau
+        </div>
     </footer>
 </div>
 <!-- DEV SHEET -->
