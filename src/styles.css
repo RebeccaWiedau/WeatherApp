@@ -36,16 +36,6 @@ h1 {
   font-weight: 100;
 }
 
-.weather-location {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-size: 2rem;
-  display: inline;
-}
-
-.today-date {
-
-}
-
 .today__current-time {
   font-size: 30px;
 }
@@ -53,20 +43,48 @@ h1 {
   justify-content: space-between;
   align-content: center;
 }
+
+.weather-location {
+   font-family: "Montserrat Alternates", sans-serif;
+   font-size: 2rem;
+   display: inline;
+ }
 .search-bar {
   display: inline;
 }
 
-.switch-image {
-  width: 35px;
-  margin: 7px;
-  line-height: 1;
-  font-size: 14px;
+.change-button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.degree-sign {
+.round-button {
+  border-color: #a04dff;
+  background: -webkit-linear-gradient(#9c47fc, #356ad2);
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: white;
+  box-sizing: content-box;
+  padding: 0;
+}
+
+.round-button i {
+  width: 35px;
+  margin: 7px;
+}
+i.fa-exchange-alt {
+  margin-top: 0;
+}
+
+.app-container {
+  margin: 10px auto;
+  padding: 0 40px;
+}
+
+.button-degree-sign {
   font-weight: bold;
 }
+
 .today__weather-icon {
   width: 80px;
   height: 80px;
@@ -91,35 +109,11 @@ h1 {
   vertical-align: text-bottom;
 }
 
-.round-button {
-  border-color: #a04dff;
-  background: -webkit-linear-gradient(#9c47fc, #356ad2);
-  -webkit-background-clip: border-box;
-  -webkit-text-fill-color: white;
-  box-sizing: content-box;
-  padding: 0;
+
+.today__max-temp, .today__min-temp, .current-humidity, .current-wind-speed {
+  font-size: 25px;
+  margin: 10px;
 }
-
-.fa-map-marker-alt {
-  width: 35px;
-  margin: 7px;
-}
-
-
-.change-button {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.app-container {
-  margin: 10px auto;
-  padding: 0 40px;
-}
-
-
-
-
 
 footer {
   background-color: rgba(0, 0, 0, 0.2);
@@ -128,8 +122,6 @@ footer {
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
 }
-
-
 
 /* ------DEV------ */
 .icon-sheet i {
@@ -142,4 +134,14 @@ footer {
   background: -webkit-linear-gradient(#9c47fc, #356ad2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.icon-test2 {
+  width: 100px;
+  background-image: url("../media/icons/github-brands.svg");
+background-color: white;
+}
+.icon-test {
+  width: 100px;
+  color: white;
 }

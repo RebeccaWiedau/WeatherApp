@@ -95,7 +95,7 @@ function setWeather(response) {
 
   //TODO SET ICON
 
- setWeatherIcon(appData.weather.id, appData.weather.description);
+ // setWeatherIcon(appData.weather.id, appData.weather.description);
 }
 
 //CITY SEARCH
