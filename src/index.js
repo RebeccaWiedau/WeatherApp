@@ -107,7 +107,7 @@ function currentLocationWeather(position) {
   let longitude = position.coords.longitude;
   let unit = degreeUnitButton.getAttribute("value").valueOf();
   let apiKey = "3706e2853360265ffac41fac1cf2f67c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&$units=${unit}&appid=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=${unit}&appid=${apiKey}`;
   axios.get(apiUrl).then(setWeather);
 }
 
