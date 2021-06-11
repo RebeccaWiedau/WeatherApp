@@ -118,26 +118,23 @@ function currentLocation() {
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", currentLocation);
 
-// function switchUnit() {
-//   let fahrenheitButton = document.querySelector("#fahrenheit");
-//   let celsiusButton = document.querySelector("#celsius");
-//   let currentTemp = document.querySelector("#current-temp__value");
-//   let unit = this.value;
-//   if (unit === "fahrenheit") {
-//     celsiusButton.removeAttribute("disabled");
-//     fahrenheitButton.setAttribute("disabled", true);
-//     currentTemp.innerHTML = "66";
-//   }
 
-//   if (unit === "celsius") {
-//     fahrenheitButton.removeAttribute("disabled");
-//     celsiusButton.setAttribute("disabled", true);
-//     currentTemp.innerHTML = "20";
-//   }
-// }
+function changeUnit() {
+  let changingUnit = this.value;
+  let degreeSigns = document.querySelectorAll(".degree-sign");
+  let buttonDegreeSign = document.querySelector(".button-degree-sign");
 
-// let fahrenheitButton = document.querySelector("#fahrenheit");
-// let celsiusButton = document.querySelector("#celsius");
+  if (changingUnit === "fahrenheit") {
+    degreeSigns.forEach(degreeSign => { degreeSign.innerHTML = "°F"});
+    buttonDegreeSign.innerHTML = "℃";
+    this.value = "celsius";
+  } else if (changingUnit === "celsius") {
+    degreeSigns.forEach(degreeSign => { degreeSign.innerHTML = "℃"});
+    buttonDegreeSign.innerHTML = "°F";
+    this.value = "fahrenheit";
+  }
+}
 
-// fahrenheitButton.addEventListener("click", switchUnit);
-// celsiusButton.addEventListener("click", switchUnit);
+let degreeUnitButton= document.querySelector("#degree-unit-button");
+
+degreeUnitButton.addEventListener("click", changeUnit);
