@@ -106,6 +106,7 @@ function weatherByCity(searchedCity) {
   axios.get(apiUrl).then(setWeather);
 }
 
+
 function searchCity(event) {
   event.preventDefault();
   let currentCity = document.querySelector("#weather-city");
@@ -176,6 +177,6 @@ function changeUnit() {
   }
 }
 
-
+weatherByCity("Solingen");
 
 degreeUnitButton.addEventListener("click", changeUnit);

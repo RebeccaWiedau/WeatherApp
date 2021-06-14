@@ -136,11 +136,6 @@ footer {
   -webkit-text-fill-color: transparent;
 }
 
-.icon-test2 {
-  width: 100px;
-  background-image: url("../media/icons/github-brands.svg");
-background-color: white;
-}
 .icon-test {
   width: 100px;
   color: white;
