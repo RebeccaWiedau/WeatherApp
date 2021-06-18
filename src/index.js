@@ -85,7 +85,7 @@ currentDate();
 function setForecast(response) {
     let unit = degreeUnitButton.getAttribute("value").valueOf();
     if (unit === "metric") {
-        unit = "℃";
+        unit = "°C";
     } else if (unit === "imperial") {
         unit = "°F";
     }
@@ -244,12 +244,12 @@ function changeUnit() {
         degreeSigns.forEach(degreeSign => {
             degreeSign.innerHTML = "°F"
         });
-        buttonDegreeSign.innerHTML = "℃";
+        buttonDegreeSign.innerHTML = "°C";
         convertTemperatureToFahrenheit();
         this.value = "imperial";
     } else if (changingUnit === "imperial") {
         degreeSigns.forEach(degreeSign => {
-            degreeSign.innerHTML = "℃"
+            degreeSign.innerHTML = "°C"
         });
         buttonDegreeSign.innerHTML = "°F";
         convertTemperatureToCelsius();
