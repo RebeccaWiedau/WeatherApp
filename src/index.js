@@ -52,7 +52,7 @@ currentDate();
 // SET THE WEATHER TO HTML
 function setWeatherIcon(weatherIcon, weatherDescription) {
     let currentWeatherIconEl = document.querySelector("#today__weather-icon");
-    currentWeatherIconEl.innerHTML = `<img src="media/icons/weather-icon-${weatherIcon}-dark.svg"/>`;
+    currentWeatherIconEl.innerHTML = `<img src="media/icons/dark/weather-icon-${weatherIcon}-dark.svg"/>`;
 }
 
 function setForecast(response) {
@@ -76,9 +76,9 @@ function setForecast(response) {
             forecastRowEl +=
                 `<div class="forecast-day col-3 d-flex" id="forecast-day-${index}">
                                 <div class="forecast-weekday" id="forecast-weekday-${forecastDayData.date.weekday}">${forecastDayData.date.weekday}</div>
-                                <img src="media/icons/weather-icon-${forecastDayData.icon}-dark.svg" class="forecast-weather-icon"/>
-                                <div class="forecast-max-temperature"><img src="media/icons/temperature-high-solid-hot.svg" class="forecast-temp-icon"/><span class="temperature">${Math.round(forecastDayData.tempMax)}</span><span class="degree-sign">${unit}</span></div>
-                            <div class="forecast-min-temperature"></span><img src="media/icons/temperature-low-solid-cold.svg" class="forecast-temp-icon"/> <span class="temperature">${Math.round(forecastDayData.tempMin)}</span><span class="degree-sign">${unit}</span></div>
+                                <img src="media/icons/dark/weather-icon-${forecastDayData.icon}-dark.svg" class="forecast-weather-icon"/>
+                                <div class="forecast-max-temperature"><img src="media/icons/dark/temperature-high-solid-hot.svg" class="forecast-temp-icon"/><span class="temperature">${Math.round(forecastDayData.tempMax)}</span><span class="degree-sign">${unit}</span></div>
+                            <div class="forecast-min-temperature"></span><img src="media/icons/dark/temperature-low-solid-cold.svg" class="forecast-temp-icon"/> <span class="temperature">${Math.round(forecastDayData.tempMin)}</span><span class="degree-sign">${unit}</span></div>
                             </div>`
 
         }
