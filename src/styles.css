@@ -20,6 +20,13 @@ body {
   padding: 0;
   max-width: 900px;
 }
+.weather-location__date-wrapper {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+.weather-location__date__time {
+  margin: 0 30px;
+}
 
 header {
   padding: 10px 60px 5px 30px;
@@ -109,19 +116,30 @@ i.fa-exchange-alt {
   vertical-align: text-bottom;
 }
 
-
+.humidity-icon, .wind-speed-icon {
+  width: 20px;
+}
 .today__max-temp, .today__min-temp, .current-humidity, .current-wind-speed {
   font-size: 25px;
   margin: 10px;
 }
 .forecast-day {
-  /*flex-wrap: wrap;*/
-  align-content: center;
+  align-items: center;
   flex-direction: column;
 }
+.forecast-weather-icon {
+  width: 70px;
+}
+.forecast-weekday {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 30px;
+}
 .forecast-temp-icon {
-  /*display: inline-block;*/
   width: 15px;
+}
+
+.today-temp-icon {
+  width: 23px;
 }
 footer {
   background-color: rgba(0, 0, 0, 0.2);
