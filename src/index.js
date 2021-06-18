@@ -1,5 +1,36 @@
 //DATE
 let degreeUnitButton = document.querySelector("#degree-unit-button");
+let themeModeButton = document.querySelector("#theme-mode-button");
+
+
+function getWeatherIconPath(apiWeatherIcon) {
+    let activeTheme = themeModeButton.getAttribute("value").valueOf();
+    switch (apiWeatherIcon) {
+        case '50n':
+            apiWeatherIcon = "50d";
+            break;
+        case '13n':
+            apiWeatherIcon = "13d";
+            break;
+        case '11n':
+            apiWeatherIcon = "11d";
+            break;
+        case '10n':
+            apiWeatherIcon = "10d";
+            break;
+        case '09n':
+            apiWeatherIcon = "09d";
+            break;
+        case '04n':
+        case '03d':
+        case '03n':
+            apiWeatherIcon = "04d";
+            break;
+        default:
+            break;
+    }
+    return `media/icons/${activeTheme}/weather-icon-${apiWeatherIcon}-${activeTheme}.svg`;
+}
 
 function twoDigitFormat(number) {
     if (number < 10) {
@@ -49,11 +80,7 @@ function currentDate() {
 
 currentDate();
 
-// SET THE WEATHER TO HTML
-function setWeatherIcon(weatherIcon, weatherDescription) {
-    let currentWeatherIconEl = document.querySelector("#today__weather-icon");
-    currentWeatherIconEl.innerHTML = `<img src="media/icons/darkmode/weather-icon-${weatherIcon}-darkmode.svg"/>`;
-}
+
 
 function setForecast(response) {
     let unit = degreeUnitButton.getAttribute("value").valueOf();
@@ -131,7 +158,7 @@ function setWeather(response) {
     let currentTemp = document.querySelector("#current-temp__value");
     let currentHumidity = document.querySelector("#current-humidity__value");
     let currentWindSpeed = document.querySelector("#current-wind-speed__value");
-
+    let currentWeatherIconEl = document.querySelector("#today__weather-icon");
     let todayMaxTemp = document.querySelector("#today__max-temp-value");
     let todayMinTemp = document.querySelector("#today__min-temp-value");
     weatherCity.innerHTML = appData.location.city;
@@ -143,8 +170,7 @@ function setWeather(response) {
     todayMaxTemp.innerHTML = Math.round(appData.weather.temp.max);
 
     //TODO SET ICON
-
-    setWeatherIcon(appData.weather.icon, appData.weather.description);
+    currentWeatherIconEl.innerHTML = `<img src="${getWeatherIconPath(appData.weather.icon)}"/>`;
 }
 
 
