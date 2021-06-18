@@ -10,13 +10,13 @@ function twoDigitFormat (number) {
 
 function convertTimestampToDate(timestamp) {
   let weekdays = [
-    "Sun,",
-    "Mon,",
-    "Tue,",
-    "Wed,",
-    "Thu,",
-    "Fri,",
-    "Sat,"
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
   ];
 
   let date = {
@@ -43,7 +43,7 @@ function currentDate() {
   let now = convertTimestampToDate(new Date());
 
   dateEl.innerHTML = `${now.day}.${now.month}.${now.year}`;
-  weekdayEl.innerHTML = `${now.weekday}`;
+  weekdayEl.innerHTML = `${now.weekday},`;
   currentTimeEl.innerHTML = `${now.hour}:${now.minutes}`;
 }
 
@@ -54,6 +54,41 @@ function setWeatherIcon(weatherID, weatherDescription) {
   let currentWeatherIcon = document.querySelector("#today__weather-icon");
   currentWeatherIcon.innerHTML = '<img src="media/icons/cloud-showers-heavy-solid.svg"/>';
 }
+
+function setForecast(response) {
+  let dailyForecastApiData = response.data.daily;
+  let forecastEl = document.querySelector("#forecast");
+  let forecastRowEl= `<div class="row" id="forecast-row">`;
+  dailyForecastApiData.forEach(function(forecastDay, index) {
+    if (index > 0 && index < 5) {
+      let forecastDayData = {
+        date: convertTimestampToDate(new Date(forecastDay.dt * 1000)),
+        id: forecastDay.weather[0].id,
+        tempMax: forecastDay.temp.max,
+        tempMin: forecastDay.temp.min
+      }
+      forecastRowEl +=
+          `<div class="forecast-day col-3 d-flex" id="forecast-day-${index}">
+                                <div class="forecast-weekday" id="forecast-weekday-${forecastDayData.date.weekday}">${forecastDayData.date.weekday}</div>
+                                <div class="forecast-icon">${forecastDayData.id}</div>
+                                <div class="forecast-max-temperature"><img src="media/icons/temperature-high-solid-hot.svg" class="forecast-temp-icon"/><span>${Math.round(forecastDayData.tempMax)}</div>
+                            <div class="forecast-min-temperature"></span><img src="media/icons/temperature-low-solid-cold.svg" class="forecast-temp-icon"/> <span>${Math.round(forecastDayData.tempMin)}</span></div>
+                            </div>`
+
+    }
+
+  });
+  forecastRowEl += `</div>`;
+  forecastEl.innerHTML = forecastRowEl;
+}
+function getForecast(longitude, latitude) {
+  let exlude = "alerts,minutely,hourly";
+  let unit = degreeUnitButton.getAttribute("value").valueOf();
+  let apiKey = "3706e2853360265ffac41fac1cf2f67c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=${unit}&exclude=${exlude}&appid=${apiKey}`;
+  axios.get(apiUrl).then(setForecast);
+}
+
 function setWeather(response) {
   let appData = {
     location: {
@@ -75,8 +110,7 @@ function setWeather(response) {
       description: response.data.weather[0].description
     }
   };
-
-  console.log(appData);
+  getForecast(appData.location.longitude, appData.location.latitude);
   let weatherCity = document.querySelector("#weather-city");
   let weatherCountry = document.querySelector("#weather-country");
   let currentTemp = document.querySelector("#current-temp__value");
@@ -97,6 +131,7 @@ function setWeather(response) {
 
  // setWeatherIcon(appData.weather.id, appData.weather.description);
 }
+
 
 //CITY SEARCH
 function weatherByCity(searchedCity) {

@@ -114,7 +114,15 @@ i.fa-exchange-alt {
   font-size: 25px;
   margin: 10px;
 }
-
+.forecast-day {
+  /*flex-wrap: wrap;*/
+  align-content: center;
+  flex-direction: column;
+}
+.forecast-temp-icon {
+  /*display: inline-block;*/
+  width: 30px;
+}
 footer {
   background-color: rgba(0, 0, 0, 0.2);
   border-top: rgba(0, 0, 0, 0.4) 1px solid;
