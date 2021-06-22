@@ -146,9 +146,9 @@ function setWeather(response) {
     };
     getForecast(appData.location.longitude, appData.location.latitude);
     let locationDateData = convertTimestampToDate(new Date(appData.location.timestamp));
-    let locationDateHTML = `<div>Last Update:</div>
-                           <div class="weather-location__date">
+    let locationDateHTML = `<div class="weather-location__date">
                              <span class="weather-location__date__time">${locationDateData.hour}:${locationDateData.minutes}</span>
+                                             <img src="media/icons/original/clock-solid.svg" alt="clock" title="last update" class="clock-icon" />
                              <span class="weather-location__date__day">${locationDateData.day}.${locationDateData.month}.${locationDateData.year}</span>
                            </div>`;
     let locationDateEl = document.querySelector(".weather-location__date-wrapper");

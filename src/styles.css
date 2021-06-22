@@ -25,9 +25,7 @@ body {
 .weather-location__date-wrapper {
   font-size: 20px;
   padding-bottom: 10px;
-}
-.weather-location__date__time {
-  margin: 0 30px;
+  flex-direction:row-reverse;
 }
 
 header {
@@ -127,6 +125,8 @@ i.fa-exchange-alt {
 .forecast-day {
   align-items: center;
   flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
 }
 .forecast-weather-icon {
   width: 70px;
