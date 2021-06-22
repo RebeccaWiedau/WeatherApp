@@ -72,7 +72,6 @@ h1 {
   border-color: #a04dff;
   background: -webkit-linear-gradient(#9c47fc, #356ad2);
   -webkit-background-clip: border-box;
-  -webkit-text-fill-color: white;
   box-sizing: content-box;
   padding: 0;
 }
@@ -157,14 +156,49 @@ footer {
 }
 
 .icon-sheet .fas,.icon-sheet .fab,.icon-sheet .far {
-  color: white;
+
 
   background: -webkit-linear-gradient(#9c47fc, #356ad2);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  
 }
 
 .icon-test {
   width: 100px;
   color: white;
+}
+
+
+.search-sheet-button {
+    width: 40px;
+    padding: 5px;
+}
+
+.sheet-fahrenheit-button {
+    color: #def;
+    font-size: 36px;
+}
+
+
+
+
+.clock-icon, .github-icon {
+    background-color: #def;
+    border-radius: 100%;
+    padding: 1px;
+    background-clip: padding-box;
+    width: 30px;
+}
+
+.font-awesome-icon {
+    background-color: #def;
+    border-radius: 10%;
+    padding: 0px 2px;
+    background-clip: padding-box;
+    width: 30px;
+}
+
+.icon-darkmode {
+    height: 100px;
+    padding:7px;
 }
