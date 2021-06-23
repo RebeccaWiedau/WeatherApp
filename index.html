@@ -25,8 +25,9 @@
                 <span class="weather-city" id="weather-city">City</span>,
                 <span class="weather-country" id="weather-country">Country</span>
             </div>
+
             <form class="search-bar" id="search-bar">
-                <div class="input-group mb-3">
+                <div class="input-group">
                     <input id="city-input" type="text" class="form-control" placeholder="Enter location..."/>
                     <div class="input-group-append">
                         <button class="btn btn-outline-light change-button" type="submit">
@@ -35,15 +36,17 @@
                     </div>
                 </div>
             </form>
-            <button class="round-button rounded-circle" id="current-location-button">
-                <i class="fas fa-map-marker-alt"></i>
-            </button>
-            <button class="round-button rounded-circle" id="degree-unit-button" value="metric">
-                    <span class="button-degree-sign">°F</span><br/><i class="fas fa-exchange-alt"></i>
-            </button>
-            <button class="round-button rounded-circle" id="theme-mode-button" value="darkmode">
-                <i class="fas fa-eye"></i>
-            </button>
+            <div class="button-container">
+                <button class="round-button rounded-circle" id="current-location-button" title="Current location">
+                    <img src="media/icons/darkmode/map-marker-darkmode.svg" alt="map-marker" class="map-marker-icon darkmode"/>
+                </button>
+                <button class="round-button rounded-circle" id="degree-unit-button" value="metric" title="Change unit">
+                    <span class="button-degree-sign">°F</span>
+                </button>
+                <button class="round-button rounded-circle" id="theme-mode-button" value="darkmode" title="Theme mode">
+                    <img src="media/icons/darkmode/eye-darkmode.svg" alt="eye" class="eye-icon darkmode"/>
+                </button>
+            </div>
         </div>
         <hr/>
         <div class="main row">
@@ -70,7 +73,7 @@
                                 <span class="today__min-temp-value temperature" id="today__min-temp-value" data-temp-value="18">18</span>
                                 <span class="degree-sign">°C</span>
                             </span>
-                    </div>
+                        </div>
                         <div class="current-humidity d-inline-block">
                             <img src="media/icons/darkmode/tint-darkmode.svg" class="humidity-icon"/>
                             <span class="current__value" id="current-humidity__value">80</span>
@@ -84,21 +87,21 @@
 
                     </div>
                 </div>
+            </div>
+            <div class="right-main-col col-8">
+                <div class="weather-location__date-wrapper d-flex">
                 </div>
-                <div class="right-main-col col-8">
-                    <div class="weather-location__date-wrapper d-flex">
-                    </div>
-                    <div class="forecast" id="forecast">
+                <div class="forecast" id="forecast">
 
-                    </div>
                 </div>
+            </div>
         </div>
     </div>
     <footer>
-        <div>
-            App by Rebecca Wiedau <a href="https://github.com/RebeccaWiedau/WeatherApp/" target="blank_"><img src="media/icons/darkmode/github-brands-darkmode.svg" alt="Github" title="Github-Repository" class="github-icon" /></a>
-            Icons by Font Awesome <a href="https://fontawesome.com/license" target="_blank"><img src="media/icons/darkmode/font-awesome-brands-darkmode.svg" title="Fontawesone" alt="Fontawesome" class="font-awesome-icon" /></a>
-        </div>
+        <span class="app-by">App by Rebecca Wiedau <a href="https://github.com/RebeccaWiedau/WeatherApp/" target="blank_"><img src="media/icons/darkmode/github-brands-darkmode.svg" alt="Github"
+                                                                                                                               title="Github-Repository" class="github-icon"/></a></span>
+        <span class="icons-by">Icons by Font Awesome <a href="https://fontawesome.com/license" target="_blank"><img src="media/icons/darkmode/font-awesome-brands-darkmode.svg" title="Fontawesone"
+                                                                                                                    alt="Fontawesome" class="font-awesome-icon"/></a></span>
     </footer>
 </div>
 

@@ -1,171 +1,189 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;300;400;500;600&family=Roboto:wght@100;300;400&display=swap");
 
 body {
-  /*font-family: "Roboto", sans-serif;*/
-  background-color: rgb(30, 30, 30);
-  font-family: "Montserrat Alternates", sans-serif;
+    /*font-family: "Roboto", sans-serif;*/
+    background-color: rgb(30, 30, 30);
+    font-family: "Montserrat Alternates", sans-serif;
 
 }
 
 .container {
-  border-radius: 25px;
-  margin-top: 5px;
-  background: linear-gradient(
-          112.1deg,
-          rgb(32, 38, 57) 11.4%,
-          rgb(63, 76, 119) 70.2%
-  );
-  /*TODO LIGHT THEME*/
-  /*background: linear-gradient(48deg, rgb(243, 187, 143), rgb(252, 242, 205) 56%);*/
+    border-radius: 25px;
+    margin-top: 5px;
+    background: linear-gradient(
+            112.1deg,
+            rgb(32, 38, 57) 11.4%,
+            rgb(63, 76, 119) 70.2%
+    );
+    /*TODO LIGHT THEME*/
+    /*background: linear-gradient(48deg, rgb(243, 187, 143), rgb(252, 242, 205) 56%);*/
 
-  color: white;
-  padding: 0;
-  max-width: 900px;
+    color: white;
+    padding: 0;
+    max-width: 900px;
 }
+
 .weather-location__date-wrapper {
-  font-size: 20px;
-  padding-bottom: 10px;
-  flex-direction:row-reverse;
+    font-size: 20px;
+    padding-bottom: 10px;
+    flex-direction: row-reverse;
 }
 
 header {
-  padding: 10px 60px 5px 30px;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-bottom: rgba(0, 0, 0, 0.4) 1px solid;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  justify-content: space-between;
+    padding: 10px 60px 5px 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-bottom: rgba(0, 0, 0, 0.4) 1px solid;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    justify-content: space-between;
 }
 
 h1 {
-  display: inline-block;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 100;
+    display: inline-block;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 100;
 }
 
 .today__current-time {
-  font-size: 30px;
+    font-size: 30px;
 }
+
 .top-bar {
-  justify-content: space-between;
-  align-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
+
+
 
 .weather-location {
-   font-family: "Montserrat Alternates", sans-serif;
-   font-size: 2rem;
-   display: inline;
- }
-.search-bar {
-  display: inline;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 2rem;
+    display: inline;
 }
 
+
 .change-button {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: rgba(255, 255, 255, 0.1);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
 }
 
 .round-button {
-  border-color: #a04dff;
-  background: -webkit-linear-gradient(#9c47fc, #356ad2);
-  -webkit-background-clip: border-box;
-  box-sizing: content-box;
-  padding: 0;
+    border-color: #a04dff;
+    background: -webkit-linear-gradient(#9c47fc, #356ad2);
+    -webkit-background-clip: border-box;
+    box-sizing: content-box;
+    color: #def;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 7px;
 }
 
-.round-button i {
-  width: 35px;
-  margin: 7px;
+.round-button img {
+    width: 30px;
+    height: 30px;
 }
-i.fa-exchange-alt {
-  margin-top: 0;
-}
+
 
 .app-container {
-  margin: 10px auto;
-  padding: 0 40px;
+    margin: 10px auto;
+    padding: 0 40px;
 }
 
 .button-degree-sign {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .today__weather-icon {
-  width: 80px;
-  height: 80px;
-  display: inline-block;
-  text-align: center;
-  font-size: 70px;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    text-align: center;
+    font-size: 70px;
 }
 
 .today__weather-icon i {
-  vertical-align: text-top;
-  color: gold;
+    vertical-align: text-top;
+    color: gold;
 }
 
 .today__current-temp {
-  display: inline-block;
-  text-align: center;
-  margin-left: 25px;
-  font-size: 60px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 25px;
+    font-size: 60px;
 }
 
 .today__current-temp span {
-  vertical-align: text-bottom;
+    vertical-align: text-bottom;
 }
 
 .humidity-icon, .wind-speed-icon {
-  width: 20px;
+    width: 20px;
 }
+
 .today__max-temp, .today__min-temp, .current-humidity, .current-wind-speed {
-  font-size: 25px;
-  margin: 10px;
+    font-size: 25px;
+    margin: 10px;
 }
+
 .forecast-day {
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 200px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
 }
+
 .forecast-weather-icon {
-  width: 70px;
+    width: 70px;
 }
+
 .forecast-weekday {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-size: 30px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 30px;
 }
+
 .forecast-temp-icon {
-  width: 15px;
+    width: 15px;
 }
 
 .today-temp-icon {
-  width: 23px;
+    width: 23px;
 }
+
 footer {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-top: rgba(0, 0, 0, 0.4) 1px solid;
-  padding: 5px 10px;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-top: rgba(0, 0, 0, 0.4) 1px solid;
+    padding: 8px 15px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    display: flex;
+    justify-content: space-between;
 }
 
 /* ------DEV------ */
 .icon-sheet i {
-  font-size: 50px;
+    font-size: 50px;
 }
 
-.icon-sheet .fas,.icon-sheet .fab,.icon-sheet .far {
+.icon-sheet .fas, .icon-sheet .fab, .icon-sheet .far {
 
 
-  background: -webkit-linear-gradient(#9c47fc, #356ad2);
-  -webkit-background-clip: text;
-  
+    background: -webkit-linear-gradient(#9c47fc, #356ad2);
+    -webkit-background-clip: text;
+
 }
 
 .icon-test {
-  width: 100px;
-  color: white;
+    width: 100px;
+    color: white;
 }
 
 
@@ -178,8 +196,6 @@ footer {
     color: #def;
     font-size: 36px;
 }
-
-
 
 
 .clock-icon, .github-icon {
@@ -200,5 +216,5 @@ footer {
 
 .icon-darkmode {
     height: 100px;
-    padding:7px;
+    padding: 7px;
 }
