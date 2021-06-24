@@ -103,7 +103,7 @@ function setForecast(response) {
             forecastRowEl +=
                 `<div class="forecast-day col-3 d-flex" id="forecast-day-${index}">
                                 <div class="forecast-weekday" id="forecast-weekday-${forecastDayData.date.weekday}">${forecastDayData.date.weekday}</div>
-                                <img src="media/icons/darkmode/weather-icon-${forecastDayData.icon}-darkmode.svg" class="forecast-weather-icon"/>
+                                <img src="${getWeatherIconPath(forecastDayData.icon)}" class="forecast-weather-icon"/>
                                 <div class="forecast-max-temperature"><img src="media/icons/darkmode/temperature-high-darkmode.svg" class="forecast-temp-icon"/><span class="temperature">${Math.round(forecastDayData.tempMax)}</span><span class="degree-sign">${unit}</span></div>
                             <div class="forecast-min-temperature"></span><img src="media/icons/darkmode/temperature-low-darkmode.svg" class="forecast-temp-icon"/> <span class="temperature">${Math.round(forecastDayData.tempMin)}</span><span class="degree-sign">${unit}</span></div>
                             </div>`
