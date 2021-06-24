@@ -30,18 +30,18 @@ body {
 }
 
 header {
-    padding: 10px 60px 5px 30px;
+    padding: 10px 5px 5px 30px;
     background-color: rgba(0, 0, 0, 0.2);
     border-bottom: rgba(0, 0, 0, 0.4) 1px solid;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    justify-content: space-between;
 }
 
 h1 {
     display: inline-block;
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 100;
+    font-size: 2rem;
 }
 
 .today__current-time {
@@ -52,8 +52,9 @@ h1 {
     justify-content: space-between;
     align-items: center;
 }
+.navbar {
 
-
+}
 
 .weather-location {
     font-family: "Montserrat Alternates", sans-serif;
@@ -71,7 +72,7 @@ h1 {
 .button-container {
     display: flex;
     justify-content: space-between;
-    width: 20%;
+    min-width: 30%
 }
 
 .round-button {
@@ -80,15 +81,15 @@ h1 {
     -webkit-background-clip: border-box;
     box-sizing: content-box;
     color: #def;
-    font-size: 30px;
+    font-size: 10px;
     display: flex;
     align-items: center;
     padding: 0 7px;
 }
 
 .round-button img {
-    width: 30px;
-    height: 30px;
+    width: 10px;
+
 }
 
 

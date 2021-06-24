@@ -12,20 +12,25 @@
 <body>
 <div class="container">
     <header class="d-flex">
-        <h1>WeatherApp</h1> <small>optimizing in progress</small>
-        <div class="today-date d-inline-block" id="today-date">
-            <div class="today__current-time">14:30</div>
-            <div class="today__weekday d-inline-block">DAY</div>
-            <div class="today__day d-inline-block">21.10.21</div>
+        <h1>WeatherApp</h1>
+        <div class="button-container">
+            <button class="round-button rounded-circle" id="current-location-button" title="Current location">
+                <img src="media/icons/darkmode/map-marker-darkmode.svg" alt="map-marker" class="map-marker-icon darkmode"/>
+            </button>
+            <button class="round-button rounded-circle" id="degree-unit-button" value="metric" title="Change unit">
+                <span class="button-degree-sign">°F</span>
+            </button>
+            <button class="round-button rounded-circle" id="theme-mode-button" value="darkmode" title="Theme mode">
+                <img src="media/icons/darkmode/eye-darkmode.svg" alt="eye" class="eye-icon darkmode"/>
+            </button>
         </div>
     </header>
     <div class="app-container">
-        <div class="top-bar d-flex">
+        <div class="top-bar d-flex flex-column-reverse flex-sm-row">
             <div class="weather-location">
                 <span class="weather-city" id="weather-city">City</span>,
                 <span class="weather-country" id="weather-country">Country</span>
             </div>
-
             <form class="search-bar" id="search-bar">
                 <div class="input-group">
                     <input id="city-input" type="text" class="form-control" placeholder="Enter location..."/>
@@ -36,17 +41,12 @@
                     </div>
                 </div>
             </form>
-            <div class="button-container">
-                <button class="round-button rounded-circle" id="current-location-button" title="Current location">
-                    <img src="media/icons/darkmode/map-marker-darkmode.svg" alt="map-marker" class="map-marker-icon darkmode"/>
-                </button>
-                <button class="round-button rounded-circle" id="degree-unit-button" value="metric" title="Change unit">
-                    <span class="button-degree-sign">°F</span>
-                </button>
-                <button class="round-button rounded-circle" id="theme-mode-button" value="darkmode" title="Theme mode">
-                    <img src="media/icons/darkmode/eye-darkmode.svg" alt="eye" class="eye-icon darkmode"/>
-                </button>
+            <div class="today-date d-flex" id="today-date">
+                <div class="today__current-time">14:30</div>
+                <div class="today__weekday">DAY</div>
+                <div class="today__day">21.10.21</div>
             </div>
+
         </div>
         <hr/>
         <div class="main row">

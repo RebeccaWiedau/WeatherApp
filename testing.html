@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>WeatherApp</title>
+    <meta charset="UTF-8"/>
+    <script src="https://kit.fontawesome.com/3a6fcdce20.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"/>
+    <link href="src/styles.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <header class="d-flex ">
+        <h1>WeatherApp</h1>
+        <nav class="navbar navbar-expand-sm navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <button class="round-button" id="current-location-button" title="Current location">
+                            <span class="button-text d-none d-md-inline">Your Location</span>
+                            <img src="media/icons/darkmode/map-marker-darkmode.svg" alt="map-marker" class="map-marker-icon darkmode"/>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="round-button" id="degree-unit-button" value="metric" title="Change unit">
+                            <span class="button-text d-none d-md-inline">Change Unit</span>
+                            <span class="button-degree-sign">°F</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="round-button" id="theme-mode-button" value="darkmode" title="Theme mode">
+                            <span class="button-text d-none d-md-inline">Lightmode</span>
+                            <img src="media/icons/darkmode/eye-darkmode.svg" alt="eye" class="eye-icon darkmode"/>
+                        </button>
+                    </li>
+                </ul>
+
+            <form class="search-bar form-inline" id="search-bar">
+                <div class="input-group">
+                    <input id="city-input" type="text" class="form-control" placeholder="Enter location..."/>
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-light change-button" type="submit">
+                            <i class="fas fa-search-location"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+</div>
+</nav>
+</header>
+<div class="app-container">
+    <div class="top-bar d-flex flex-column-reverse flex-sm-row">
+        <div class="weather-location">
+            <span class="weather-city" id="weather-city">City</span>,
+            <span class="weather-country" id="weather-country">Country</span>
+        </div>
+
+        <div class="today-date d-flex" id="today-date">
+            <div class="today__current-time">14:30</div>
+            <div class="today__weekday">DAY</div>
+            <div class="today__day">21.10.21</div>
+        </div>
+
+    </div>
+    <hr/>
+    <div class="main row">
+        <div class="left-main-col col-12 col-lg-4">
+            <div class="today row">
+                <div class="col-6 col-lg-12">
+                    <div class="today__weather-icon" id="today__weather-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="today__current-temp d-inline-block">
+                        <span class="current__value temperature" id="current-temp__value" data-temp-value="20">20</span>
+                        <span class="degree-sign">°C</span>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-12">
+                    <div class="today__max-min-temp">
+                            <span class="today__max-temp">
+                                <img src="media/icons/darkmode/temperature-high-darkmode.svg" class="today-temp-icon"/>
+                                <span class="today__max-temp-value temperature" id="today__max-temp-value" data-temp-value="21">21</span>
+                                <span class="degree-sign">°C</span>
+                            </span>
+                        <span class="today__min-temp">
+                                <img src="media/icons/darkmode/temperature-low-darkmode.svg" class="today-temp-icon"/>
+                                <span class="today__min-temp-value temperature" id="today__min-temp-value" data-temp-value="18">18</span>
+                                <span class="degree-sign">°C</span>
+                            </span>
+                    </div>
+                    <div class="current-humidity d-inline-block">
+                        <img src="media/icons/darkmode/tint-darkmode.svg" class="humidity-icon"/>
+                        <span class="current__value" id="current-humidity__value">80</span>
+                        <span class="percent-sign">%</span>
+                    </div>
+                    <div class="current-wind-speed d-inline-block">
+                        <img src="media/icons/darkmode/wind-darkmode.svg" class="wind-speed-icon"/>
+                        <span class="current__value" id="current-wind-speed__value">9 </span>
+                        <span class="speed-sign">m/s</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="right-main-col col-12 col-lg-8">
+            <div class="weather-location__date-wrapper d-flex">
+            </div>
+            <div class="forecast" id="forecast">
+
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+        <span class="app-by">App by Rebecca Wiedau <a href="https://github.com/RebeccaWiedau/WeatherApp/" target="blank_"><img src="media/icons/darkmode/github-brands-darkmode.svg" alt="Github"
+                                                                                                                               title="Github-Repository" class="github-icon"/></a></span>
+    <span class="icons-by">Icons by Font Awesome <a href="https://fontawesome.com/license" target="_blank"><img src="media/icons/darkmode/font-awesome-brands-darkmode.svg" title="Fontawesone"
+                                                                                                                alt="Fontawesome" class="font-awesome-icon"/></a></span>
+</footer>
+</div>
+
+<script src="src/index.js"></script>
+</body>
+</html>
