@@ -219,3 +219,12 @@ footer {
     height: 100px;
     padding: 7px;
 }
+
+.row {
+    border: 1px solid lightcoral;
+}
+
+header div, .row div, nav {
+    border: 1px solid dodgerblue;
+}
+
