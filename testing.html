@@ -3,6 +3,7 @@
 <head>
     <title>WeatherApp</title>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/3a6fcdce20.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"/>
@@ -15,6 +16,7 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
+<div class="phone-wrapper">
 <div class="container">
     <header class="d-flex">
         <div class="col-3"><h1>WeatherApp</h1></div>
@@ -24,10 +26,11 @@
 
     </header>
     <div class="app-container">
-        <div class="row"><div class="col-8">Solingen</div><div class="col-4">LastUpdate</div></div>
+        <div class="row"><div class="col-6">Solingen</div><div class="col-6">LastUpdate 12.12.12</div></div>
         <div class="row">
-            <div class="col-md-6">4</div>
-            <div class="col-md-6">
+            <div class="col-12">
+                </div>
+            <div class="col-12">
                 <div class="row">
                     <div class="col-6">
                         <div class="row">
@@ -108,14 +111,15 @@
     </div>
 
 
-<footer>
-        <span class="app-by">App by Rebecca Wiedau <a href="https://github.com/RebeccaWiedau/WeatherApp/" target="blank_"><img src="media/icons/darkmode/github-brands-darkmode.svg" alt="Github"
-                                                                                                                               title="Github-Repository" class="github-icon"/></a></span>
-    <span class="icons-by">Icons by Font Awesome <a href="https://fontawesome.com/license" target="_blank"><img src="media/icons/darkmode/font-awesome-brands-darkmode.svg" title="Fontawesone"
-                                                                                                                alt="Fontawesome" class="font-awesome-icon"/></a></span>
+
+</div>
+    <footer><div class="col-4">
+        <a href="https://github.com/RebeccaWiedau/WeatherApp/" target="blank_" class="d-block"><img src="media/icons/darkmode/github-brands-darkmode.svg" alt="Github"
+                                                                                                                               title="Github-Repository" class="github-icon"/></a><span class="app-by">App by Rebecca Wiedau </span></div><div class="col-4">
+    <a class="d-block" href="https://fontawesome.com/license" target="_blank"><img src="media/icons/darkmode/font-awesome-brands-darkmode.svg" title="Fontawesone"
+                                                                                                                alt="Fontawesome" class="font-awesome-icon"/></a><span class="icons-by">Icons by Font Awesome </span></div>
 </footer>
 </div>
-
 
 </body>
 </html>

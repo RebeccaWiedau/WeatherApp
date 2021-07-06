@@ -9,7 +9,7 @@ body {
 
 .container {
     border-radius: 25px;
-    margin-top: 5px;
+
     background: linear-gradient(
             112.1deg,
             rgb(32, 38, 57) 11.4%,
@@ -17,10 +17,11 @@ body {
     );
     /*TODO LIGHT THEME*/
     /*background: linear-gradient(48deg, rgb(243, 187, 143), rgb(252, 242, 205) 56%);*/
-
+    box-shadow: rgba(166, 168, 186, 0.5) 0 0 15px inset;
     color: white;
     padding: 0;
-    max-width: 900px;
+
+   height: 600px;
 }
 
 .weather-location__date-wrapper {
@@ -30,11 +31,12 @@ body {
 }
 
 header {
-    padding: 10px 5px 5px 30px;
+    padding: 10px 5px 0 30px;
     background-color: rgba(0, 0, 0, 0.2);
-    border-bottom: rgba(0, 0, 0, 0.4) 1px solid;
+    border: rgba(0, 0, 0, 0.4) 1px solid;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+    height: 60px;
 }
 
 h1 {
@@ -94,8 +96,13 @@ h1 {
 
 
 .app-container {
-    margin: 10px auto;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
     padding: 0 40px;
+    height: 540px;
+    border-left: rgba(0, 0, 0, 0.4) 1px solid;
+    border-right: rgba(0, 0, 0, 0.4) 1px solid;
+    border-bottom: rgba(0, 0, 0, 0.4) 1px solid;
 }
 
 .button-degree-sign {
@@ -160,13 +167,11 @@ h1 {
 }
 
 footer {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-top: rgba(0, 0, 0, 0.4) 1px solid;
-    padding: 8px 15px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    margin-top: 30px;
+    padding: 8px 0;
     display: flex;
     justify-content: space-between;
+    color: white;
 }
 
 /* ------DEV------ */
@@ -221,10 +226,22 @@ footer {
 }
 
 .row {
-    border: 1px solid lightcoral;
+    /*border: 1px solid lightcoral;*/
 }
 
 header div, .row div, nav {
-    border: 1px solid dodgerblue;
+    /*border: 1px solid dodgerblue;*/
 }
 
+a {
+    margin: 0 auto;
+    width: fit-content;
+}
+.phone-wrapper{
+    /*border: white solid 2px;*/
+    min-height: 800px;
+    width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+    background: url("../media/icons/darkmode/mobile-darkmode.svg") no-repeat;
+}
